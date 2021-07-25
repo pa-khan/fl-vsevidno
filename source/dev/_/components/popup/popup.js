@@ -52,10 +52,14 @@ class Popup {
     this.elem.block.classList.remove(this.classShow);
     this.elem.wrap.classList.remove('--show');
 		this.elem.imgWrap.classList.remove('--show');
+    // html.classList.remove('overflow-disable');
+    body.classList.remove('overflow-disable');
     wrap.classList.remove('overflow-disable');
   }
 
   open() {
+    // html.classList.add('overflow-disable');
+    body.classList.add('overflow-disable');
     wrap.classList.add('overflow-disable');
     this.elem.block.classList.add(this.classShow);
   }
@@ -161,20 +165,6 @@ class Popup {
           element.classList.add('--show');
           this.elem.wrap.classList.add('--show');
           this.elem.wrap.prepend(element);
-          this.open();
-        } else if (get_extension(popupId) == 'jpg' || get_extension(popupId) == 'jpeg' || get_extension(popupId) == 'png') {
-        	if (this.groups[group]) {
-        		this.setButtonsImg(group, item);
-        	}
-        	
-          var img = document.createElement('img');
-          img.src = popupId;
-          img.className = '--hidden';
-          this.elem.imgWrap.classList.add('--show');
-          this.elem.img.append(img);
-          setTimeout(() => {
-            img.classList.remove('--hidden');
-          }, 300);
           this.open();
         }
       });

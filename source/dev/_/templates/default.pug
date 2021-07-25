@@ -6,7 +6,7 @@ html(lang="ru")
 		meta(charset="UTF-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		//- link(rel="apple-touch-icon" sizes="180x180" href="_/uploads/favicon/apple-touch-icon.png")
-		//- link(rel="icon" type="image/png" sizes="32x32" href="_/uploads/favicon/favicon-32x32.png")
+		link(rel="shortcut icon" type="image/png" href="_/uploads/favicon.png")
 		//- link(rel="icon" type="image/png" sizes="16x16" href="_/uploads/favicon/favicon-16x16.png")
 		//- link(rel="manifest" href="_/uploads/favicon/site.webmanifest")
 		//- link(rel="mask-icon" href="_/uploads/favicon/safari-pinned-tab.svg" color="#5bbad5")
@@ -14,15 +14,19 @@ html(lang="ru")
 		//- meta(name="theme-color" content="#ffffff")
 		title=title
 	body
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript" >(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");ym(83181028, "init", {clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script><noscript><div><img src="https://mc.yandex.ru/watch/83181028" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter --><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=G-YVZY1X47ZD"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-YVZY1X47ZD');</script>
+
 		.wrap
 			link(rel="stylesheet" href="_/sys/css/style.css" + version)
+			script(src="https://unpkg.com/imask")
 			script(src="_/sys/js/common.js" + version)
 
 			+style('header', 'blocks')
 			include ../blocks/header/header
 			+script('header', 'blocks')
 			
-			main.main
+			main.main.ani
 				block content
 
 			+style('footer', 'blocks')
@@ -30,8 +34,4 @@ html(lang="ru")
 			
 			+script('input', 'components')
 			+script('check', 'components')
-			+script('select', 'components')
-			+script('tabs', 'components')
 			+script('popup', 'components')
-			+script('slider', 'components')
-			+script('tog', 'components')

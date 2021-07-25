@@ -16,22 +16,14 @@ class Input {
 
     var input = element.querySelector('input');
 
+    input.addEventListener('focusin', () => {
+      element.classList.add('--focus');
+    });
+
+
     if (element.classList.contains(this.classPhone)) {
-      input.addEventListener('focus', () => {
-      	if (input.value == '') {
-      		input.value = '+7 (';
-      	}
-      });
-      input.addEventListener('click', () => {
-      	if (input.value == '+7 (') {
-      		input.focus();
-      		input.setSelectionRange(input.value.length, input.value.length);
-      	}
-      });
-      input.addEventListener('blur', () => {
-      	if (input.value == '+7 (') {
-      		input.value = '';
-      	}
+      IMask(input, {
+        mask: '+{7} (000) 000-00-00'
       });
     } else if (element.classList.contains(this.classNumber)) {
       input.addEventListener('input', () => {

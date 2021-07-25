@@ -3,11 +3,32 @@
 }
 .input__area {
   width: 100%;
-  font-family: "Tahoma", sans-serif;
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #2B2B2D;
   background-color: transparent;
+  transition: 0.3s;
 }
 .input__area::placeholder {
-  opacity: 0.5;
-  color: #fff;
+  opacity: 1;
+  color: #2B2B2D;
+}
+.input.--bg-white .input__area {
+  background-color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15), 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+.input.--md .input__area {
+  padding: 0 32px;
+  height: 58px;
+  border-radius: 15px;
+  font-size: 20px;
+}
+.input.--name .input__area {
+  text-transform: capitalize;
+}
+.input.--name .input__area::placeholder {
+  text-transform: none;
+}
+.input.--error .input__area {
+  border-color: #f00;
 }

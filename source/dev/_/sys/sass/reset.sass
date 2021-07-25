@@ -7,17 +7,16 @@
 	box-sizing: border-box
 
 html, body
-	height: 100%
+	// height: 100%
 
 body
-	color: #fff
+	color: $black
 	font-size: $fzMain
 	font-family: $ffMain
 	margin-left: auto
 	margin-right: auto
 	position: relative
 	font-weight: 400
-	background-color: #1b1d1f
 
 h1, h2, h3, h4, h5, h6
 	font: inherit
@@ -34,14 +33,13 @@ li
 	list-style-image: none
 
 a
-	color: $yellow
+	color: $black
 	text-decoration: none
 	outline: none
 	transition: .3s
-	font-weight: 600
 	border-bottom: 1px solid transparent
 	&:hover
-		color: $yellow-l
+		// color: $yellow-l
 
 input, textarea, button
 	outline: none
@@ -51,7 +49,7 @@ var
 	font-style: normal
 
 strong
-	font-weight: 700
+	font-weight: 800
 
 i
 	font-style: normal
@@ -76,5 +74,5 @@ path, circle, rect, line
 .wrap
 	display: flex
 	flex-direction: column
-	min-height: 100%
-	overflow: hidden
+	// min-height: 100%
+	overflow-x: hidden

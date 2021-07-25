@@ -3,10 +3,10 @@
 }
 .textarea__area {
   width: 100%;
-  font-family: "Tahoma", sans-serif;
-  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  color: #2B2B2D;
   resize: none;
 }
 .textarea__area::placeholder {
-  color: #000000;
+  color: #2B2B2D;
 }

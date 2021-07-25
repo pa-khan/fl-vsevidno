@@ -5,19 +5,14 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
-}
-
 body {
-  color: #fff;
-  font-size: 16px;
-  font-family: "IBM Plex Sans", sans-serif;
+  color: #2B2B2D;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   font-weight: 400;
-  background-color: #1b1d1f;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,17 +33,12 @@ li {
 }
 
 a {
-  color: #ffb800;
+  color: #2B2B2D;
   text-decoration: none;
   outline: none;
   transition: 0.3s;
-  font-weight: 600;
   border-bottom: 1px solid transparent;
 }
-a:hover {
-  color: #ffd600;
-}
-
 input, textarea, button {
   outline: none;
   appearance: none;
@@ -59,7 +49,7 @@ var {
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 800;
 }
 
 i {
@@ -91,6 +81,5 @@ path, circle, rect, line {
 .wrap {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
