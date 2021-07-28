@@ -37,6 +37,20 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	document.addEventListener('scroll', navToggleFixing);
 	document.addEventListener('resize', navToggleFixing);
 
+
+	let camsCounters = document.querySelectorAll('.cams__counter');
+
+	setInterval(()=>{
+		let currentDate = new Date();
+		let hours   = currentDate.getHours() < 10 ? "0" + currentDate.getHours() : currentDate.getHours(),
+				minutes = currentDate.getMinutes() < 10 ? "0" + currentDate.getMinutes() : currentDate.getMinutes(),
+				seconds = currentDate.getSeconds() < 10 ? "0" + currentDate.getSeconds() : currentDate.getSeconds();
+		camsCounters.forEach((counter)=>{
+			counter.innerText = hours + ':' + minutes + ':' + seconds; 
+		});
+	}, 1000);
+	
+
 	const anchors = document.querySelectorAll('a[href*="#"]')
 
 	for (let anchor of anchors) {
